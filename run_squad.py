@@ -166,7 +166,6 @@ class BertForQuestionAnsweringPos(BertPreTrainedModel):
 
         start = self.start_outputs(F.relu(self.con(result3)))
         end = self.end_outputs(F.relu(self.con(result3)))
-        print(start)
         
         start = torch.reshape(n(start), (bactSize, 1))
         end = torch.reshape(n(end), (bactSize, 1))
